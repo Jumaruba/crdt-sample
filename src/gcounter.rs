@@ -94,7 +94,7 @@ impl<V> GCounter<V>
         for (key, value) in gcounter.counter.iter() {
             let gcounter_value = gcounter.counter.get(key).unwrap();
             let new_value = max(gcounter_value, value);
-            self.counter.insert(key.clone(), *new_value);
+            self.counter.insert(key.clone(), new_value.clone());
         }
     }
 }
