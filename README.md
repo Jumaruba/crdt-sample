@@ -6,6 +6,7 @@ A repository containing some CRDTs implementations in Rust.
 | --- | --- | --- | --- | 
 | Aworset | State-Based | [Here](./src/aworset.rs) | [Here](./tests/aworset.rs) |
 | GCounter | State-Based | [Here](./src/gcounter.rs) | -- | 
+| PnCounter | State-Based | [Here](./src/pncounter.rs) | -- | 
 
 # References
 - [1] N. Preguiça, C. Baquero, and M. Shapiro, “Conflict-free Replicated Data Types (CRDTs),” arXiv:1805.06358 [cs], May 2018, doi: 10.1007/978-3-319-63962-8\_185-1.

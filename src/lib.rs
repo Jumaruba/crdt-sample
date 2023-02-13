@@ -6,3 +6,6 @@ pub use nodeId::NodeId;
 
 pub mod gcounter;
 pub use gcounter::GCounter;
+
+pub mod pncounter;
+pub use pncounter::PnCounter;
