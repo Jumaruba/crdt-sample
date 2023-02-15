@@ -26,6 +26,10 @@ where
             local_counter: 1,
         }
     }
+    
+    pub fn elements(&self) -> HashSet<E>{
+        self.set.iter().map(|triple| triple.1.clone()).collect()
+    }
 
     pub fn add(&mut self, element: E) {
         self.cc.insert((self.id.clone(), self.local_counter));

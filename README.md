@@ -4,9 +4,10 @@ A repository containing some CRDTs implementations in Rust.
 
 | CRDT | Type | File | Tests |  
 | --- | --- | --- | --- | 
-| Aworset | State-Based | [Here](./src/aworset.rs) | [Here](./tests/aworset.rs) |
-| GCounter | State-Based | [Here](./src/gcounter.rs) | -- | 
-| PnCounter | State-Based | [Here](./src/pncounter.rs) | -- | 
+| Add-Wins Observed Remove Set (Aworset) | State-Based | [Here](./src/aworset.rs) | [Here](./tests/aworset.rs) |
+| Grow-Only Counter (GCounter) | State-Based | [Here](./src/gcounter.rs) | -- | 
+| Positive-Negative Counter (PnCounter) | State-Based | [Here](./src/pncounter.rs) | -- | 
+| Multi-Value Register (MvReg) | State-Based | | | 
 
 # References
 - [1] N. Preguiça, C. Baquero, and M. Shapiro, “Conflict-free Replicated Data Types (CRDTs),” arXiv:1805.06358 [cs], May 2018, doi: 10.1007/978-3-319-63962-8\_185-1.

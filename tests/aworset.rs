@@ -1,3 +1,5 @@
+use std::collections::HashSet;
+
 use crdt_sample::{Aworset, NodeId};
 
 fn get_a1_id() -> NodeId {
@@ -159,4 +161,23 @@ fn join_intersection(){
 
     // Then
     assert_eq!(res, a1);
+}
+
+#[test]
+fn elements(){
+    let mut a1 = setup_a1(); 
+    a1.set.insert((get_a1_id(), "A".to_string(), 1));
+    a1.set.insert((get_a1_id(), "B".to_string(), 2));
+    a1.set.insert((get_a2_id(), "B".to_string(), 1));
+    a1.cc.insert((get_a1_id(), 1));
+    a1.cc.insert((get_a1_id(), 2));
+    a1.cc.insert((get_a2_id(), 1));
+
+    let res = HashSet::from(["A".to_string(), "B".to_string()]);
+
+    // When  
+    let set = a1.elements();
+
+    // Then 
+    assert_eq!(set, res);
 }
