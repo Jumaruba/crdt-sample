@@ -2,13 +2,13 @@
 
 A repository containing some CRDTs implementations in Rust. 
 
-| CRDT | Type | File | Tests | 
-| --- | --- | --- | --- | 
-| Add-Wins Observed Remove Set (Aworset) | State-Based | [aworset.rs](./src/aworset.rs) | [aworset.rs](./tests/aworset.rs) | 
-| **[Optimized]**  Add-Wins Observed Remove Set (AworsetOpt) | State-Based | [aworset_opt.rs](./src/aworset_opt.rs) | --- | 
-| Grow-Only Counter (GCounter) | State-Based | [gcounter.rs](./src/gcounter.rs) | -- |
-| Positive-Negative Counter (PnCounter) | State-Based | [pncounter.rs](./src/pncounter.rs) | -- |
-| Multi-Value Register (MvReg) | State-Based | --- | --- | 
+| CRDT | Type | Tests | 
+| --- | --- | --- | 
+| [Add-Wins Observed Remove Set (Aworset)](./src/aworset.rs)| State-Based | [aworset.rs](./tests/aworset.rs) | 
+| [**[Optimized]**  Add-Wins Observed Remove Set (AworsetOpt)](./src/aworset_opt.rs) | State-Based | --- | 
+| [Grow-Only Counter (GCounter)](./src/gcounter.rs)| State-Based | -- |
+| [Positive-Negative Counter (PnCounter)](./src/pncounter.rs)| State-Based | -- |
+| Multi-Value Register (MvReg) [on progress]| State-Based | --- | --- | 
 
 ## Auxiliary structures 
 
