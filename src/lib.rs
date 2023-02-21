@@ -10,5 +10,9 @@ pub use gcounter::GCounter;
 pub mod pncounter;
 pub use pncounter::PnCounter;
 
+pub mod dotcontext;
+pub use dotcontext::DotContext;
+
 //pub mod mvreg;
 //pub use mvreg::Mvreg;
+
