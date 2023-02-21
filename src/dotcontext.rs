@@ -5,7 +5,7 @@ use std::fmt::Debug;
 
 /// Tries to optimize mapping.
 /// Source: https://github.com/CBaquero/delta-enabled-crdts/blob/master/delta-crdts.cc
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub struct DotContext<K: PartialEq + Eq + Hash + Clone + Debug> {
     pub cc: HashMap<K, i64>,   // Compact Causal Context
     pub dc: HashSet<(K, i64)>, // Dot Cloud
