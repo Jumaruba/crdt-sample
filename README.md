@@ -4,11 +4,11 @@ A repository containing some CRDTs implementations in Rust.
 
 | CRDT | Type | Tests | 
 | --- | --- | --- | 
-| [Add-Wins Observed Remove Set (Aworset)](./src/aworset.rs)| State-Based | [aworset.rs](./tests/aworset.rs) | 
-| [**[Optimized]**  Add-Wins Observed Remove Set (AworsetOpt)](./src/aworset_opt.rs) | State-Based | --- | 
-| [Grow-Only Counter (GCounter)](./src/gcounter.rs)| State-Based | -- |
-| [Positive-Negative Counter (PnCounter)](./src/pncounter.rs)| State-Based | -- |
-| Multi-Value Register (MvReg) [on progress]| State-Based | --- | --- | 
+| **[Aworset]** [Add-Wins Observed Remove Set](./src/aworset.rs)| State-Based | [aworset.rs](./tests/aworset.rs) | 
+| **[Aworset Optimized]** [Add-Wins Observed Remove Set](./src/aworset_opt.rs) | State-Based | --- | 
+| **[GCounter]** [Grow-Only Counter](./src/gcounter.rs)| State-Based | -- |
+| **[PnCounter]** [Positive-Negative Counter](./src/pncounter.rs)| State-Based | -- |
+| **[MvReg]** Multi-Value Register [on progress]| State-Based | --- | --- | 
 
 ## Auxiliary structures 
 
