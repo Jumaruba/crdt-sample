@@ -2,7 +2,7 @@
 name = "crdt-sample"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
+description = "A library containing samples of crdts"
+readme = "README.md"
+repository = "https://github.com/Jumaruba/crdt-sample"
 [dependencies]
