@@ -1,4 +1,4 @@
-use std::fmt::{Display, Debug};
+use std::{fmt::{Display, Debug}, mem::size_of};
 
 #[derive(PartialEq, Eq, Hash, Clone)]
 pub struct NodeId {
@@ -9,6 +9,10 @@ pub struct NodeId {
 impl NodeId {
     pub fn new(port: i64, addr: String) -> Self {
         Self { port, addr }
+    }
+
+    pub fn get_bytes_size(&self) -> usize {
+        return size_of::<i64>() + self.addr.len();
     }
 }
 

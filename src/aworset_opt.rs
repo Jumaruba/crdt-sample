@@ -1,5 +1,5 @@
 use core::hash::Hash;
-use std::{collections::{HashSet}, fmt::Display};
+use std::{collections::{HashSet}, fmt::Display, mem::size_of};
 use std::fmt::Debug;
 use crate::{NodeId, DotContext};
 
@@ -23,6 +23,18 @@ where
             set: HashSet::new(),
             cc: DotContext::new()
         }
+    }
+
+    pub fn get_bytes_size(&self) -> usize {
+        let mut total_size = 0; 
+        total_size += self.id.get_bytes_size(); 
+        total_size += self.cc.get_bytes_size(); 
+        for (nodeid, _, _) in self.set.iter(){
+            total_size += nodeid.get_bytes_size();
+            total_size += size_of::<E>(); 
+            total_size += size_of::<i64>();
+        }
+        total_size 
     }
     
     pub fn elements(&self) -> HashSet<E>{

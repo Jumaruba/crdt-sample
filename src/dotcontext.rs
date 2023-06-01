@@ -2,6 +2,7 @@ use std::cmp::max;
 use std::collections::{HashMap, HashSet};
 use std::hash::Hash;
 use std::fmt::Debug;
+use std::mem::size_of;
 
 /// Tries to optimize mapping.
 /// Source: https://github.com/CBaquero/delta-enabled-crdts/blob/master/delta-crdts.cc
@@ -17,6 +18,20 @@ impl<K: PartialEq + Eq + Hash + Clone + Debug> DotContext<K> {
             cc: HashMap::new(),
             dc: HashSet::new(),
         }
+    }
+
+    pub fn get_bytes_size(&self) -> usize {
+        let mut total_size = 0; 
+        for (_, _) in self.cc.iter() {
+            total_size += size_of::<K>(); 
+            total_size += size_of::<i64>(); 
+        }
+
+        for _ in self.dc.iter(){
+            total_size += size_of::<K>(); 
+            total_size += size_of::<i64>(); 
+        }
+        total_size
     }
 
     /// Verifies if the received argument was already seen.
