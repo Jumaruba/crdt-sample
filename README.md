@@ -1,6 +1,13 @@
 # Sample CRDTs
 
-A repository containing some CRDTs implementations in Rust. 
+A repository containing some CRDTs implementations. 
+## Python 
+| CRDT | Type | Tests | 
+| --- | --- | --- | 
+| **[GCounter]** [Grow-Only Counter](./python/gcounter.py)| State-Based | -- |
+| **[PnCounter]** [Positive-Negative Counter](./python/pncounter.py)| State-Based | -- |
+
+## Rust 
 
 | CRDT | Type | Tests | 
 | --- | --- | --- | 
