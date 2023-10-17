@@ -4,10 +4,10 @@ A repository containing some CRDTs implementations in Rust.
 
 | CRDT | Type | Tests | 
 | --- | --- | --- | 
-| **[Aworset]** [Add-Wins Observed Remove Set](./src/aworset.rs)| State-Based | [aworset.rs](./tests/aworset.rs) | 
-| **[Aworset Optimized]** [Add-Wins Observed Remove Set](./src/aworset_opt.rs) | State-Based | --- | 
-| **[GCounter]** [Grow-Only Counter](./src/gcounter.rs)| State-Based | -- |
-| **[PnCounter]** [Positive-Negative Counter](./src/pncounter.rs)| State-Based | -- |
+| **[Aworset]** [Add-Wins Observed Remove Set](./rust/src/aworset.rs)| State-Based | [aworset.rs](./rust/tests/aworset.rs) | 
+| **[Aworset Optimized]** [Add-Wins Observed Remove Set](./rust/src/aworset_opt.rs) | State-Based | --- | 
+| **[GCounter]** [Grow-Only Counter](./rust/src/gcounter.rs)| State-Based | -- |
+| **[PnCounter]** [Positive-Negative Counter](./rust/src/pncounter.rs)| State-Based | -- |
 | **[MvReg]** Multi-Value Register [on progress]| State-Based | --- | --- | 
 
 ## Auxiliary structures 
@@ -16,7 +16,7 @@ Some auxiliary structures were built to create some CRDTs:
 
 | Name | Tests | Explanation | Reference | 
 | --- | --- | --- | --- | 
-| [DotContext](./src/dotcontext.rs) | [dotcontext.rs](./tests/dotcontext.rs) | [Bartosz Sypytkowski Blog](https://www.bartoszsypytkowski.com/optimizing-state-based-crdts-part-2/) | [delta-enabled-crdts](https://github.com/CBaquero/delta-enabled-crdts/blob/master/delta-crdts.cc) | 
+| [DotContext](./rust/src/dotcontext.rs) | [dotcontext.rs](./rust/tests/dotcontext.rs) | [Bartosz Sypytkowski Blog](https://www.bartoszsypytkowski.com/optimizing-state-based-crdts-part-2/) | [delta-enabled-crdts](https://github.com/CBaquero/delta-enabled-crdts/blob/master/delta-crdts.cc) | 
 
 # Usage
 The cargo package is available at: 
