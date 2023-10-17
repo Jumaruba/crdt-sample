@@ -17,7 +17,7 @@ A repository containing some CRDTs implementations.
 | **[PnCounter]** [Positive-Negative Counter](./rust/src/pncounter.rs)| State-Based | -- |
 | **[MvReg]** Multi-Value Register [on progress]| State-Based | --- | --- | 
 
-## Auxiliary structures 
+### Auxiliary structures 
 
 Some auxiliary structures were built to create some CRDTs: 
 
@@ -25,7 +25,7 @@ Some auxiliary structures were built to create some CRDTs:
 | --- | --- | --- | --- | 
 | [DotContext](./rust/src/dotcontext.rs) | [dotcontext.rs](./rust/tests/dotcontext.rs) | [Bartosz Sypytkowski Blog](https://www.bartoszsypytkowski.com/optimizing-state-based-crdts-part-2/) | [delta-enabled-crdts](https://github.com/CBaquero/delta-enabled-crdts/blob/master/delta-crdts.cc) | 
 
-# Usage
+### Usage
 The cargo package is available at: 
 - https://crates.io/crates/crdt-sample
 
@@ -35,7 +35,7 @@ Add the following piece of code to your `Cargo.toml`:
 [dependencies]
 crdt-sample = "0.1.0"
 ```
-## Example
+### Example
 ```rust
 use crdt_sample::{AworsetOpt, NodeId};
 fn main() {
